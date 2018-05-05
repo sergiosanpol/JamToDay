@@ -47,16 +47,15 @@ func _on_Button_pressed():
 	get_node(".").remove_and_skip()
 	evento_tarjetas._evento()
 	
-	
-	if tipo == 1:
-		return player._actualizar_facebook()
-	elif tipo == 2:
-		return player._calcular_tiempo_instagram()
-	elif tipo == 3:
-		return player._calcular_tiempo_twitter()
-	elif tipo == 4:
-		return player._calcular_tiempo_whatsapp()
-	elif tipo == 5:
-		return player._calcular_tiempo_youtube()
+	if num == 1:
+		return player._actualizar_facebook(fin)
+	elif num == 2:
+		return player._actualizar_instagram(fin)
+	elif num == 3:
+		return player._actualizar_twitter(fin)
+	elif num == 4:
+		return player._actualizar_whatsapp(fin)
+	elif num == 5:
+		return player._actualizar_youtube(fin)
 		
 	

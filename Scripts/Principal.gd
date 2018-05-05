@@ -9,6 +9,7 @@ var player = load("res://Scripts/player.gd").new()
 var evento_tarjeta = load("res://Scripts/evento_tarjeta.gd").new()
 var lista_ventanas = []
 var SIZE
+var contador
 var tiempo = 0.0;
 var tiempo_iteracion = 1;
 
@@ -20,7 +21,6 @@ func _ready():
 	OS.set_window_resizable(false)
 
 func _process(delta):
-	marcadores()
 	tiempo+=delta
 	if(tiempo>=tiempo_iteracion):	
 		lista_ventanas.append(ventanas.instance())
