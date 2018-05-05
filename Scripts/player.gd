@@ -112,7 +112,20 @@ func _actualizar_youtube(tiempo_ms):
 		this.youtube-=50;
 		this.vida+=2;
 	
+func _calcular_tiempo_whatsapp():
+	return 1000 / (this.whatsapp / 150)
+	
+func _calcular_tiempo_facebook():
+	return 1000 / (this.facebook / 500)
+	
+func _calcular_tiempo_youtube():
+	return 1000 / (this.youtube / 1000)
 
+func _calcular_tiempo_instagram():
+	return 1000 / (this.instagram / 3000)
+	
+func _calcular_tiempo_twitter():
+	return 1000 / (contactos / 1000)
 	
 	
 
