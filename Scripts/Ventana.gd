@@ -39,14 +39,3 @@ func _ready():
 		
 func _on_Button_pressed():
 	get_node(".").remove_and_skip()
-	
-	if tipo == 1:
-		return player._actualizar_facebook(100)
-	elif tipo == 2:
-		return player._calcular_tiempo_instagram()
-	elif tipo == 3:
-		return player._calcular_tiempo_twitter()
-	elif tipo == 4:
-		return player._calcular_tiempo_whatsapp()
-	elif tipo == 5:
-		return player._calcular_tiempo_youtube()

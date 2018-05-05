@@ -22,8 +22,8 @@ func _process(delta):
 	tiempo+=delta
 	if(tiempo>=tiempo_iteracion):	
 		lista_ventanas.append(ventanas.instance())
-		var random_x = int(rand_range(0, SIZE.x))
-		var random_y = int(rand_range(0, SIZE.y))
+		var random_x = int(rand_range(0 + 105, SIZE.x - 105))
+		var random_y = int(rand_range(0 + 25, SIZE.y - 25))
 		lista_ventanas[len(lista_ventanas) - 1].position.x = random_x
 		lista_ventanas[len(lista_ventanas) - 1].position.y = random_y
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
