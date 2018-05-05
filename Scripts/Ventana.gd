@@ -29,8 +29,30 @@ func _ready():
 	elif num == 5:
 		imagen = load("res://Imagenes/you.png")
 		node.set_texture(imagen)
+		
+	set_process(false)
 
-#func _process(delta):
+func _process(delta):
+	var num = round(rand_range(1,5))
+	var imagen
+	
+	print(num)
+	
+	if num == 1:
+		imagen = load("res://Imagenes/face.png")
+		node.set_texture(imagen)
+	elif num == 2:
+		imagen = load("res://Imagenes/insta.png")
+		node.set_texture(imagen)
+	elif num == 3:
+		imagen = load("res://Imagenes/twi.png")
+		node.set_texture(imagen)
+	elif num == 4:
+		imagen = load("res://Imagenes/wapp.png")
+		node.set_texture(imagen)
+	elif num == 5:
+		imagen = load("res://Imagenes/you.png")
+		node.set_texture(imagen)
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
