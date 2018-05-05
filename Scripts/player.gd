@@ -28,104 +28,104 @@ func _ready():
 
 func _actualizar_whatsapp(tiempo_ms):
 	if(tiempo_ms>=2000):
-		this.whatsapp+=4;
-		this.vida -=3;
+		whatsapp+=4;
+		vida -=3;
 	elif(tiempo_ms<2000 and tiempo_ms>=1500):
-		this.whatsapp+=3;
-		this.vida-=2;
+		whatsapp+=3;
+		vida-=2;
 	elif(tiempo_ms<1500 and tiempo_ms>=1000):
-		this.whatsapp+=1;
-		this.vida-=1;
+		whatsapp+=1;
+		vida-=1;
 	elif(tiempo_ms<1000 and tiempo_ms>=500):
-		this.whatsapp-=1;
-		this.vida+=1;
+		whatsapp-=1;
+		vida+=1;
 	else:
-		this.whatsapp-=3;
-		this.vida+=2;
+		whatsapp-=3;
+		vida+=2;
 	
 
 func _actualizar_facebook(tiempo_ms):
 	if(tiempo_ms>=2000):
-		this.facebook+=10;
-		this.vida-=3;
+		facebook+=10;
+		vida-=3;
 	elif(tiempo_ms<2000 and tiempo_ms>=1500):
-		this.facebook+=5;
-		this.vida-=2;
+		facebook+=5;
+		vida-=2;
 	elif(tiempo_ms<1500 and tiempo_ms>=1000):
-		this.facebook+=2;
-		this.vida-=1;
+		facebook+=2;
+		vida-=1;
 	elif(tiempo_ms<1000 and tiempo_ms>=500):
-		this.facebook-=2;
-		this.vida+=1;
+		facebook-=2;
+		vida+=1;
 	else:
-		this.facebook-=5;
-		this.vida+=2;
+		facebook-=5;
+		vida+=2;
 	
 func _actualizar_instagram(tiempo_ms):
 	if(tiempo_ms>=2000):
-		this.instagram+=40;
-		this.vida-=5;
+		instagram+=40;
+		vida-=5;
 	elif(tiempo_ms<2000 and tiempo_ms>=1500):
-		this.instagram+=25;
-		this.vida-=2;
+		instagram+=25;
+		vida-=2;
 	elif(tiempo_ms<1500 and tiempo_ms>=1000):
-		this.instagram+=10;
-		this.vida-=1;
+		instagram+=10;
+		vida-=1;
 	elif(tiempo_ms<1000 and tiempo_ms>=500):
-		this.instagram-=10;
-		this.vida+=1;
+		instagram-=10;
+		vida+=1;
 	else:
-		this.instagram-=25;
-		this.vida+=2;
+		instagram-=25;
+		vida+=2;
 	
 func _actualizar_twitter(tiempo_ms):
 	if(tiempo_ms>=2000):
-		this.twitter+=40;
-		this.vida-=5;
+		twitter+=40;
+		vida-=5;
 	elif(tiempo_ms<2000 and tiempo_ms>=1500):
-		this.twitter+=20;
-		this.vida-=2;
+		twitter+=20;
+		vida-=2;
 	elif(tiempo_ms<1500 and tiempo_ms>=1000):
-		this.twitter+=10;
-		this.vida-=1;
+		twitter+=10;
+		vida-=1;
 	elif(tiempo_ms<1000 and tiempo_ms>=500):
-		this.twitter-=10;
-		this.vida+=1;
+		twitter-=10;
+		vida+=1;
 	else:
-		this.twitter-=20;
-		this.vida+=2;
+		twitter-=20;
+		vida+=2;
 	
 func _actualizar_youtube(tiempo_ms):
 	if(tiempo_ms>=2000):
-		this.youtube+=100;
-		this.vida-=10;
+		youtube+=100;
+		vida-=10;
 	elif(tiempo_ms<2000 and tiempo_ms>=1500):
-		this.youtube+=50;
-		this.vida-=2;
+		youtube+=50;
+		vida-=2;
 	elif(tiempo_ms<1500 and tiempo_ms>=1000):
-		this.youtube+=20;
-		this.vida-=1;
+		youtube+=20;
+		vida-=1;
 	elif(tiempo_ms<1000 and tiempo_ms>=500):
-		this.youtube-=20;
-		this.vida+=1;
+		youtube-=20;
+		vida+=1;
 	else:
-		this.youtube-=50;
-		this.vida+=2;
+		youtube-=50;
+		vida+=2;
 	
 func _calcular_tiempo_whatsapp():
-	return 1000 / (this.whatsapp / 150)
+	return (2000.0 / (whatsapp / 150.0)) /1000.0
 	
 func _calcular_tiempo_facebook():
-	return 1000 / (this.facebook / 500)
+	return (2000.0 / (facebook / 500.0)) / 1000.0
 	
 func _calcular_tiempo_youtube():
-	return 1000 / (this.youtube / 1000)
+	return (2000.0 / (youtube / 1000.0)) / 1000.0
 
 func _calcular_tiempo_instagram():
-	return 1000 / (this.instagram / 3000)
+	return (2000.0 / (instagram / 3000.0)) / 1000.0
 	
 func _calcular_tiempo_twitter():
-	return 1000 / (contactos / 1000)
+	return (2000.0 / (twitter / 1000.0)) / 1000.0
 	
 	
 
