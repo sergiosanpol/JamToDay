@@ -27,5 +27,5 @@ func _process(delta):
 		lista_ventanas[len(lista_ventanas) - 1].position.x = random_x
 		lista_ventanas[len(lista_ventanas) - 1].position.y = random_y
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
-		tiempo = 0.1
+		tiempo = 0.0
 		print(len(lista_ventanas))
