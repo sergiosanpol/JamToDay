@@ -6,16 +6,17 @@ extends Spatial
 
 var ventanas = preload("res://Sprites/Ventana.tscn")
 var player = load("res://Scripts/player.gd").new()
+var evento_tarjeta = load("res://Scripts/evento_tarjeta.gd").new()
 var lista_ventanas = []
 var SIZE = OS.window_size
-var tiempo = 0.0;
-var tiempo_iteracion = 1;
+var tiempo = 0.0
+var contador = 0
+var tiempo_iteracion = 1.0
 
 
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	
 	pass
 
 func _process(delta):
@@ -26,6 +27,13 @@ func _process(delta):
 		var random_y = int(rand_range(0, SIZE.y))
 		lista_ventanas[len(lista_ventanas) - 1].position.x = random_x
 		lista_ventanas[len(lista_ventanas) - 1].position.y = random_y
+		lista_ventanas[len(lista_ventanas)-1]._set_evento(evento_tarjeta)
+		contador = evento_tarjeta.contador
+		if(contador%10==0):
+			tiempo_iteracion-=0.1
+		print("Contador :",contador)
+		print("Tiempo :",tiempo_iteracion)
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
 		tiempo = 0.0
-		print(len(lista_ventanas))
+		print(len(lista_ventanas))	
+	

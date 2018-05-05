@@ -112,21 +112,6 @@ func _actualizar_youtube(tiempo_ms):
 		youtube-=50;
 		vida+=2;
 	
-func _calcular_tiempo_whatsapp():
-	return (2000.0 / (whatsapp / 150.0)) /1000.0
-	
-func _calcular_tiempo_facebook():
-	return (2000.0 / (facebook / 500.0)) / 1000.0
-	
-func _calcular_tiempo_youtube():
-	return (2000.0 / (youtube / 1000.0)) / 1000.0
-
-func _calcular_tiempo_instagram():
-	return (2000.0 / (instagram / 3000.0)) / 1000.0
-	
-func _calcular_tiempo_twitter():
-	return (2000.0 / (twitter / 1000.0)) / 1000.0
-	
 	
 
 #func _process(delta):

@@ -5,9 +5,10 @@ extends Sprite
 # var b = "textvar"
 
 onready var node = get_node("TextureRect")
-var tiempo = 0.0
 var tipo = 0
 var player 
+var evento_tarjetas
+
 
 
 func _ready():	
@@ -33,15 +34,17 @@ func _ready():
 		
 	set_process(true)
 		
-
-#func _process(delta):
+func _set_evento(evento):
+	evento_tarjetas = evento
 
 		
 func _on_Button_pressed():
 	get_node(".").remove_and_skip()
+	evento_tarjetas._evento()
+	
 	
 	if tipo == 1:
-		return player._actualizar_facebook(100)
+		return player._actualizar_facebook()
 	elif tipo == 2:
 		return player._calcular_tiempo_instagram()
 	elif tipo == 3:
@@ -50,3 +53,5 @@ func _on_Button_pressed():
 		return player._calcular_tiempo_whatsapp()
 	elif tipo == 5:
 		return player._calcular_tiempo_youtube()
+		
+	
