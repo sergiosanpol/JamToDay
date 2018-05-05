@@ -6,15 +6,15 @@ extends Sprite
 
 onready var node = get_node("TextureRect")
 var tiempo = 0.0
-var tiempo_limite = 5.0
+var tipo = 0
+var player 
 
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+
+func _ready():	
 	randomize()
 	var num = int(rand_range(1,6))
 	var imagen
-	
+	 	
 	if num == 1:
 		imagen = load("res://Imagenes/face.png")
 		node.set_texture(imagen)
@@ -34,19 +34,19 @@ func _ready():
 	set_process(true)
 		
 
-func _process(delta):
-	tiempo+=delta
-	if(tiempo>=tiempo_limite):
-		get_node(".").remove_and_skip()
+#func _process(delta):
 
-func _set_tiempo(tiempo):
-	this.tiempo_limite = tiempo;
 		
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
-
 func _on_Button_pressed():
-	print("Pulsado")
 	get_node(".").remove_and_skip()
+	
+	if tipo == 1:
+		return player._actualizar_facebook(100)
+	elif tipo == 2:
+		return player._calcular_tiempo_instagram()
+	elif tipo == 3:
+		return player._calcular_tiempo_twitter()
+	elif tipo == 4:
+		return player._calcular_tiempo_whatsapp()
+	elif tipo == 5:
+		return player._calcular_tiempo_youtube()
