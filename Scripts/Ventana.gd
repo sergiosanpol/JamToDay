@@ -11,10 +11,9 @@ var tiempo_limite = 5.0
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	var num = round(rand_range(1,5))
+	randomize()
+	var num = int(rand_range(1,6))
 	var imagen
-	
-	print(num)
 	
 	if num == 1:
 		imagen = load("res://Imagenes/face.png")
@@ -43,3 +42,8 @@ func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func _on_Button_pressed():
+	print("Pulsado")
+	get_node(".").remove_and_skip()
