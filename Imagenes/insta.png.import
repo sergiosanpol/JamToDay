@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-f9ba9008f31679cd240e2c5f33a9a4fb.stex"
+path="res://.import/insta.png-79c3c2205267f3baeb51ed7102d0cd0f.stex"
 
 [deps]
 
-source_file="res://Sprites/icon.png"
-source_md5="ae7e641067601e2184afcade49abd283"
+source_file="res://Imagenes/insta.png"
+source_md5="2f8b0e54f940d80cd545b989474d053d"
 
-dest_files=[ "res://.import/icon.png-f9ba9008f31679cd240e2c5f33a9a4fb.stex" ]
-dest_md5="84511021bbc8c9d37c7f0f4d181de883"
+dest_files=[ "res://.import/insta.png-79c3c2205267f3baeb51ed7102d0cd0f.stex" ]
+dest_md5="3ae10789af49124ec0321624cbc5e5dc"
 
 [params]
 
