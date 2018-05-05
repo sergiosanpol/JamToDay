@@ -12,6 +12,7 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	for i in 10:
+		randomize()
 		lista_ventanas.append(ventanas.instance())
 		var random_x = int(rand_range(0, SIZE.x))
 		var random_y = int(rand_range(0, SIZE.y))
@@ -21,6 +22,5 @@ func _ready():
 	
 
 #func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
+
 #	pass
