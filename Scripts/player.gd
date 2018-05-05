@@ -116,3 +116,10 @@ func _actualizar_youtube(tiempo_ms):
 	else:
 		youtube-=50;
 		vida+=2;
+	
+	
+
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass

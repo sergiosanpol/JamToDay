@@ -7,7 +7,9 @@ extends Sprite
 onready var node = get_node("TextureRect")
 onready var tiempo = get_node("Timer")
 var player 
+var evento_tarjetas
 var num
+
 
 
 func _ready():	
@@ -34,20 +36,27 @@ func _ready():
 		
 	set_process(true)
 		
+func _set_evento(evento):
+	evento_tarjetas = evento
 
 #func _process(delta):
+
+		
 func _on_Button_pressed():
 	var fin = (((tiempo.time_left - 1000) * -1) * 1000)
 	get_node(".").remove_and_skip()
-	print("Tipo ", num)
+	evento_tarjetas._evento()
 	
-	if num == 1:
-		player._actualizar_facebook(fin)
-	elif num == 2:
-		player._actualizar_instagram(fin)
-	elif num == 3:
-		player._actualizar_twitter(fin)
-	elif num == 4:
-		player._actualizar_whatsapp(fin)
-	elif num == 5:
-		player._actualizar_youtube(fin)
+	
+	if tipo == 1:
+		return player._actualizar_facebook()
+	elif tipo == 2:
+		return player._calcular_tiempo_instagram()
+	elif tipo == 3:
+		return player._calcular_tiempo_twitter()
+	elif tipo == 4:
+		return player._calcular_tiempo_whatsapp()
+	elif tipo == 5:
+		return player._calcular_tiempo_youtube()
+		
+	

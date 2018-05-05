@@ -6,6 +6,7 @@ extends Spatial
 
 var ventanas = preload("res://Sprites/Ventana.tscn")
 var player = load("res://Scripts/player.gd").new()
+var evento_tarjeta = load("res://Scripts/evento_tarjeta.gd").new()
 var lista_ventanas = []
 var SIZE
 var tiempo = 0.0;
@@ -17,8 +18,6 @@ func _ready():
 	OS.set_window_size(Vector2(1100.0, 600.0))
 	SIZE = OS.window_size
 	OS.set_window_resizable(false)
-	# Called every time the node is added to the scene.
-	# Initialization here
 
 func _process(delta):
 	marcadores()
@@ -30,11 +29,12 @@ func _process(delta):
 		lista_ventanas[len(lista_ventanas) - 1].player = player
 		lista_ventanas[len(lista_ventanas) - 1].position.x = random_x
 		lista_ventanas[len(lista_ventanas) - 1].position.y = random_y
+		lista_ventanas[len(lista_ventanas)-1]._set_evento(evento_tarjeta)
+		contador = evento_tarjeta.contador
+		if(contador%10==0):
+			tiempo_iteracion-=0.1
+		print("Contador :",contador)
+		print("Tiempo :",tiempo_iteracion)
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
 		tiempo = 0.0
-		
-func marcadores():
-	print("Face " , player.facebook)
-	print("You " , player.youtube)
-	print("Vida " , player.vida)
-	
+		print(len(lista_ventanas))
