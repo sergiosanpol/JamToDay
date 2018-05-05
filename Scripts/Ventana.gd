@@ -38,6 +38,9 @@ func _process(delta):
 	tiempo+=delta
 	if(tiempo>=tiempo_limite):
 		get_node(".").remove_and_skip()
+
+func _set_tiempo(tiempo):
+	this.tiempo_limite = tiempo;
 		
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
