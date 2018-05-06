@@ -1,7 +1,7 @@
 extends Node
 
 var count = 0
-var msjs  = "Te han despido. No puedes seguir pagando internet, luz, alquiler... Toca un nuevo comienzo, ¡Suerte!"
+var msjs  = "Te han despedido. No puedes seguir pagando internet, luz, alquiler... Toca un nuevo comienzo, ¡Suerte!"
 
 func _ready():
 	pass
