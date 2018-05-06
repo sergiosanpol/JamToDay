@@ -4,7 +4,7 @@
 [ext_resource path="res://Imagenes/photo_2018-05-05_17-24-18.jpg" type="Texture" id=2]
 [ext_resource path="res://musica/tranqui.ogg" type="AudioStream" id=3]
 
-[node name="Spatial" type="Spatial"]
+[node name="Spatial" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 
@@ -32,11 +32,11 @@ size_flags_vertical = 1
 texture = ExtResource( 2 )
 stretch_mode = 0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+[node name="audio" type="AudioStreamPlayer" parent="." index="2"]
 
 stream = ExtResource( 3 )
 volume_db = 0.0
-autoplay = true
+autoplay = false
 mix_target = 0
 bus = "Master"
 
