@@ -28,9 +28,10 @@ func _ready():
 	pass
 	
 func _process(delta):
-	comprobarVidas()
 	tiempo+=delta
 	if(tiempo>=tiempo_iteracion):
+		player.reduce()
+		comprobarVidas()
 		var vent = ventanas.instance()
 		lista_ventanas.append(vent)
 		var random_x = int(rand_range(0 + 205, SIZE.x - 105))
@@ -51,8 +52,18 @@ func _process(delta):
 		
 		counts.get_node("Label_Yout").text = str(player.youtube)
 		
-		if player.vida >= 0: 
+		if player.vida <= 0: 
 			get_tree().change_scene("res://Escenas/msjMuerte1.scn")
+		
+		if player.educacion <= 0:
+#			get_tree().change_scene("res://Escenas/msjMuerte1.scn")
+			get_tree().change_scene("res://Escenas/msjWork.scn")
+		
+		if player.familia <= 0:
+			get_tree().change_scene("res://Escenas/msjFamily.scn")
+			
+		if (player.whatsapp <= 0 or player.twitter <= 0 or player.instagram <= 0 or player.youtube <= 0 or player.facebook <= 0):
+			get_tree().change_scene("res://Escenas/msjFollow.scn")
 
 		barras.get_node("ProgressFamily").value = player.familia
 		barras.get_node("ProgressWork").value = player.educacion
