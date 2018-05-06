@@ -7,6 +7,8 @@ extends Node2D
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	OS.set_window_size(Vector2(1100.0, 600.0))
+	OS.set_window_resizable(false)
 	pass
 
 #func _process(delta):
