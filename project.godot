@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Nuevo proyecto de juego"
+config/name="Lubl la estrella de las redes"
 run/main_scene="res://Escenas/Menu.tscn"
 config/icon="res://icon.png"
 
