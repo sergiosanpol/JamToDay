@@ -27,6 +27,7 @@ func _ready():
 
 
 func _actualizar_whatsapp(tiempo_ms):
+	all_print()
 	print("Tiempo what " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		whatsapp+=4;
@@ -43,9 +44,10 @@ func _actualizar_whatsapp(tiempo_ms):
 	else:
 		whatsapp-=3;
 		vida+=2;
-	
+
 
 func _actualizar_facebook(tiempo_ms):
+	all_print()
 	print("Tiempo face " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		facebook+=10;
@@ -64,6 +66,7 @@ func _actualizar_facebook(tiempo_ms):
 		vida+=2;
 	
 func _actualizar_instagram(tiempo_ms):
+	all_print()
 	print("Tiempo insta " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		instagram+=40;
@@ -82,6 +85,7 @@ func _actualizar_instagram(tiempo_ms):
 		vida+=2;
 	
 func _actualizar_twitter(tiempo_ms):
+	all_print()
 	print("Tiempo twitter " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		twitter+=40;
@@ -100,6 +104,7 @@ func _actualizar_twitter(tiempo_ms):
 		vida+=2;
 	
 func _actualizar_youtube(tiempo_ms):
+	all_print()
 	print("Tiempo you " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		youtube+=100;
@@ -117,7 +122,13 @@ func _actualizar_youtube(tiempo_ms):
 		youtube-=50;
 		vida+=2;
 	
+func all_print():
 	
+	print('wha', whatsapp)
+	print('twit', twitter)
+	print('face', facebook)
+	print('insta', instagram)
+	print('yt', youtube)
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
