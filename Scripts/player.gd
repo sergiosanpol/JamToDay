@@ -54,12 +54,12 @@ func _actualizar_whatsapp(tiempo_ms):
 		familia -= 0.3
 		educacion -= 0.2
 	elif(tiempo_ms > 1000 and tiempo_ms <= 500):
-		whatsapp-=1;
+		whatsapp-=6;
 		vida+=0.5;
 		familia += 0.7
 		educacion += 0.8
 	else:
-		whatsapp-=3;
+		whatsapp-=10;
 		vida+=1;
 		familia += 1.1
 		educacion += 1.3
@@ -84,12 +84,12 @@ func _actualizar_facebook(tiempo_ms):
 		familia -= 0.3
 		educacion -= 0.2
 	elif(tiempo_ms > 1000 and tiempo_ms <= 500):
-		facebook-=2;
+		facebook-=8;
 		vida+=0.5;
 		familia += 0.7
 		educacion += 0.8
 	else:
-		facebook-=5;
+		facebook-=15;
 		vida+=1;
 		familia += 1.1
 		educacion += 1.3
@@ -113,12 +113,12 @@ func _actualizar_instagram(tiempo_ms):
 		familia -= 0.3
 		educacion -= 0.2
 	elif(tiempo_ms > 1000 and tiempo_ms <= 500):
-		instagram-=10;
+		instagram-=50;
 		vida+=0.5;
 		familia += 0.7
 		educacion += 0.8
 	else:
-		instagram-=25;
+		instagram-=75;
 		vida+=1;
 		familia += 1.1
 		educacion += 1.3
@@ -142,12 +142,12 @@ func _actualizar_twitter(tiempo_ms):
 		familia -= 0.3
 		educacion -= 0.2
 	elif(tiempo_ms > 1000 and tiempo_ms <= 500):
-		twitter-=10;
+		twitter-=70;
 		vida+=0.5;
 		familia += 0.7
 		educacion += 0.8
 	else:
-		twitter-=20;
+		twitter-=90;
 		vida+=1;
 		familia += 1.1
 		educacion += 1.3
@@ -171,23 +171,25 @@ func _actualizar_youtube(tiempo_ms):
 		familia -= 0.3
 		educacion -= 0.2
 	elif(tiempo_ms > 1000 and tiempo_ms <= 500):
-		youtube-=20;
+		youtube-=140;
 		vida+=0.5;
 		familia += 0.7
 		educacion += 0.8
 	else:
-		youtube-=50;
+		youtube-=150;
 		vida+=1;
 		familia += 1.1
 		educacion += 1.3
 	
 func all_print():
-	
-	print('wha', whatsapp)
-	print('twit', twitter)
-	print('face', facebook)
-	print('insta', instagram)
-	print('yt', youtube)
+	print("Vida: ", vida)
+	print("Educación: ", educacion)
+	print("Familia: ", familia)
+	#print('wha', whatsapp)
+	#print('twit', twitter)
+	#print('face', facebook)
+	#print('insta', instagram)
+	#print('yt', youtube)
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
