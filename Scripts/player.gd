@@ -165,7 +165,14 @@ func _actualizar_youtube(tiempo_ms):
 		vida+=1.5;
 		familia += 2.0
 		educacion += 2.5
-	
+
+func reduce():
+	whatsapp -= 2;
+	facebook -= 8;
+	youtube -= 15;
+	twitter -= 15;
+	instagram -= 30;
+
 func all_print():
 	print("Vida: ", vida)
 	print("Educación: ", educacion)
