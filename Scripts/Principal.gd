@@ -15,7 +15,7 @@ var tiempo = 0.0;
 var tiempo_iteracion = 1;
 var dentro = false
 
-var life = preload("res://Escenas/Estado.tscn").instance()
+var barras = preload("res://Escenas/Estado.tscn").instance()
 var counts = preload("res://Escenas/Position2D.tscn").instance()
 
 func _ready():
@@ -23,7 +23,7 @@ func _ready():
 	SIZE = OS.window_size
 	OS.set_window_resizable(false)
 	counts.position = Vector2(30, 70)
-	add_child(life)
+	add_child(barras)
 	add_child(counts)
 	pass
 	
@@ -50,7 +50,9 @@ func _process(delta):
 		
 		counts.get_node("Label_Yout").text = str(player.youtube)
 		
-		life.get_node("ProgressFamily").value = player.vida
+		barras.get_node("ProgressFamily").value = player.familia
+		barras.get_node("ProgressWork").value = player.educacion
+		barras.get_node("ProgressLife").value = player.vida
 		
 		if(contador%10==0 && dentro == false):
 			if contador >= 90:
@@ -64,8 +66,9 @@ func _process(delta):
 			if contador % 10 != 0:
 				dentro = false
 				
-		print("Contador :",contador)
-		print("Tiempo :",tiempo_iteracion)
+		#print("Contador :",contador)
+		#print("Tiempo :",tiempo_iteracion)
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
 		tiempo = 0.0
-		print(len(lista_ventanas))
+		player.all_print()
+		#print(len(lista_ventanas))

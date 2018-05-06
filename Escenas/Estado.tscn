@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Node.gd" type="Script" id=1]
 [ext_resource path="res://Imagenes/bidiya.png" type="Texture" id=2]
+[ext_resource path="res://Imagenes/casita.png" type="Texture" id=3]
+[ext_resource path="res://Imagenes/tareas.png" type="Texture" id=4]
 
 [sub_resource type="Gradient" id=1]
 
@@ -160,14 +162,14 @@ _sections_unfolded = [ "Animation", "Region", "Transform" ]
 
 position = Vector2( 41.9146, 2.02685 )
 scale = Vector2( 0.109305, 0.0983694 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Animation", "Region", "Transform" ]
 
 [node name="SpriteWork" type="Sprite" parent="." index="5"]
 
 position = Vector2( 81.9146, 2.02685 )
 scale = Vector2( 0.109305, 0.0983694 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Animation", "Region", "Transform" ]
 
 
