@@ -13,6 +13,7 @@ var SIZE
 var contador
 var tiempo = 0.0;
 var tiempo_iteracion = 1;
+var dentro = false
 
 var life = preload("res://Escenas/Estado.tscn").instance()
 var counts = preload("res://Escenas/Position2D.tscn").instance()
@@ -51,13 +52,18 @@ func _process(delta):
 		
 		life.get_node("TextureProgress").value = player.vida
 		
-		if(contador%10==0):
+		if(contador%10==0 && dentro == false):
 			if contador >= 90:
 				tiempo_iteracion-=0.05
 			elif contador >= 65:
 				tiempo_iteracion-=0.1
 			else:
 				tiempo_iteracion-=0.05
+			dentro = true
+		else:
+			if contador % 10 != 0:
+				dentro = false
+				
 		print("Contador :",contador)
 		print("Tiempo :",tiempo_iteracion)
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
