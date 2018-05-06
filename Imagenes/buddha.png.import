@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo.jpg-2ece8fc057dddf5050684915a33077e7.stex"
+path="res://.import/buddha.png-1bfec69f0f805c2c3cffb26fc0d04d9b.stex"
 
 [deps]
 
-source_file="res://Imagenes/fondo.jpg"
-source_md5="1c7f584c775bcb6d8bc9fea497627337"
+source_file="res://Imagenes/buddha.png"
+source_md5="e83ef6b24a72176270b9eb247e649f2b"
 
-dest_files=[ "res://.import/fondo.jpg-2ece8fc057dddf5050684915a33077e7.stex" ]
-dest_md5="7528ddc461bc5f6f3a035a14d8cd335f"
+dest_files=[ "res://.import/buddha.png-1bfec69f0f805c2c3cffb26fc0d04d9b.stex" ]
+dest_md5="7b80db5c1748c5cfdcf4feec3b22b34d"
 
 [params]
 

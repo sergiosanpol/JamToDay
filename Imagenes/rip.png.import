@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pesé.png-2b8076d56a8b86d5fd90859330c9361a.stex"
+path="res://.import/rip.png-03d772eb2e01071ed2bb55ea2349a13d.stex"
 
 [deps]
 
-source_file="res://Imagenes/pesé.png"
-source_md5="aabf8ddbebdfd5b691031ef01cb68e7a"
+source_file="res://Imagenes/rip.png"
+source_md5="7f380557ccda97d0c81f93438e44cbc3"
 
-dest_files=[ "res://.import/pesé.png-2b8076d56a8b86d5fd90859330c9361a.stex" ]
-dest_md5="80901e05d9fe46a67b1d581ce38b9303"
+dest_files=[ "res://.import/rip.png-03d772eb2e01071ed2bb55ea2349a13d.stex" ]
+dest_md5="8d9f612f1a013157d7549a2a02485681"
 
 [params]
 

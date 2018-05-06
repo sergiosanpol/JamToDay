@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="Nuevo proyecto de juego"
-run/main_scene="res://Escenas/Principal.tscn"
+run/main_scene="res://Escenas/Menu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1100
 
 [rendering]
 
