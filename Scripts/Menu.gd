@@ -18,5 +18,5 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene("res://Escenas/Principal.tscn")
+	get_tree().change_scene("res://Escenas/container.scn")
 	pass # replace with function body
