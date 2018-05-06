@@ -7,6 +7,7 @@ extends Spatial
 var ventanas = preload("res://Sprites/Ventana.tscn")
 var player = load("res://Scripts/player.gd").new()
 var evento_tarjeta = load("res://Scripts/evento_tarjeta.gd").new()
+#var sonido = load("res://AudioStreamPlayer2D.gd").new()
 var lista_ventanas = []
 var SIZE
 var contador
