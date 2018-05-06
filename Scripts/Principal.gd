@@ -7,11 +7,12 @@ extends Spatial
 var ventanas = preload("res://Sprites/Ventana.tscn")
 var player = load("res://Scripts/player.gd").new()
 var evento_tarjeta = load("res://Scripts/evento_tarjeta.gd").new()
+var sonido = load("res://AudioStreamPlayer2D.gd").new()
 var lista_ventanas = []
-var SIZE = OS.window_size
-var tiempo = 0.0
-var contador = 0
-var tiempo_iteracion = 1.0
+var SIZE
+var contador
+var tiempo = 0.0;
+var tiempo_iteracion = 1;
 
 var vida = 100;
 var familia = 100;
@@ -27,14 +28,17 @@ var life = preload("res://Escenas/Estado.tscn").instance()
 var counts = preload("res://Escenas/Position2D.tscn").instance()
 
 func _ready():
+	OS.set_window_size(Vector2(1100.0, 600.0))
+	SIZE = OS.window_size
+	OS.set_window_resizable(false)
+	
 	add_child(life)
 	add_child(counts)
 	pass
-
+	
 func _process(delta):
 	tiempo+=delta
-	if(tiempo>=tiempo_iteracion):		
-		
+	if(tiempo>=tiempo_iteracion):
 		var vent = ventanas.instance()
 		lista_ventanas.append(vent)
 		var random_x = int(rand_range(0 + 205, SIZE.x - 105))
@@ -68,5 +72,4 @@ func _process(delta):
 		print("Tiempo :",tiempo_iteracion)
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
 		tiempo = 0.0
-		print(len(lista_ventanas))	
-	
+		print(len(lista_ventanas))

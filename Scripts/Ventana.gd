@@ -5,13 +5,13 @@ extends Sprite
 # var b = "textvar"
 
 onready var node = get_node("TextureRect")
-var num
 var player = load("res://Scripts/player.gd").new()
+onready var tiempo = get_node("Timer")
 var evento_tarjetas
-
-
+var num
 
 func _ready():	
+	tiempo.start()
 	randomize()
 	num = int(rand_range(1,6))
 	var imagen
@@ -37,8 +37,11 @@ func _ready():
 func _set_evento(evento):
 	evento_tarjetas = evento
 
+#func _process(delta):
+
 		
 func _on_Button_pressed():
+	var fin = (((tiempo.time_left - 1000) * -1) * 1000)
 	get_node(".").remove_and_skip()
 	
 	if num == 1:
