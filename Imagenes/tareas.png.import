@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/photo_2018-05-05_17-24-18.jpg-f17619508c30e4d3811bad5c52836366.stex"
+path="res://.import/tareas.png-c94ca2fb081abc121257c312b26bc982.stex"
 
 [deps]
 
-source_file="res://Imagenes/photo_2018-05-05_17-24-18.jpg"
-source_md5="e513bba2a85a343a63d3b6475b3cda14"
+source_file="res://Imagenes/tareas.png"
+source_md5="3fdedfbcf503913e35ffec791f1e006f"
 
-dest_files=[ "res://.import/photo_2018-05-05_17-24-18.jpg-f17619508c30e4d3811bad5c52836366.stex" ]
-dest_md5="ab6bb6398b493ed6cbc28ac958a81d5f"
+dest_files=[ "res://.import/tareas.png-c94ca2fb081abc121257c312b26bc982.stex" ]
+dest_md5="cb60d83e44b54cf59720526e36bffc1a"
 
 [params]
 
