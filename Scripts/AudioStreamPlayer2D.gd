@@ -11,9 +11,10 @@ var menu = load("res://musica/menu.ogg")
 var win = load("res://musica/win.ogg")
 
 func _ready():
-   set_process(true)
-   song2 = load("song2.ogg")
-   
+   set_process(false)
+   #song2 = load("song2.ogg")
+
+
 func _process(delta):
    if(self.is_playing() != true):
       if(self.get_stream() == tranqui) :

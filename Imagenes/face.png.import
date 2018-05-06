@@ -7,10 +7,10 @@ path="res://.import/face.png-7663c2e8c592c44c01549bfe32fbf344.stex"
 [deps]
 
 source_file="res://Imagenes/face.png"
-source_md5="b8a133473abb7be477f5f626f1589e48"
+source_md5="a6c36fcb6485b9d9eda88a2e80f8e316"
 
 dest_files=[ "res://.import/face.png-7663c2e8c592c44c01549bfe32fbf344.stex" ]
-dest_md5="fbfd7028e84ccb92181b432a657837bf"
+dest_md5="64f6a654b5cd4cb231a05f22baf2323c"
 
 [params]
 
