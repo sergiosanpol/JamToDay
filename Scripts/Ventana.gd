@@ -5,15 +5,15 @@ extends Sprite
 # var b = "textvar"
 
 onready var node = get_node("TextureRect")
-var tipo = 0
-var player 
+var num
+var player = load("res://Scripts/player.gd").new()
 var evento_tarjetas
 
 
 
 func _ready():	
 	randomize()
-	var num = int(rand_range(1,6))
+	num = int(rand_range(1,6))
 	var imagen
 	 	
 	if num == 1:
@@ -40,18 +40,21 @@ func _set_evento(evento):
 		
 func _on_Button_pressed():
 	get_node(".").remove_and_skip()
-	evento_tarjetas._evento()
 	
-	
-	if tipo == 1:
-		return player._actualizar_facebook()
-	elif tipo == 2:
-		return player._calcular_tiempo_instagram()
-	elif tipo == 3:
-		return player._calcular_tiempo_twitter()
-	elif tipo == 4:
-		return player._calcular_tiempo_whatsapp()
-	elif tipo == 5:
-		return player._calcular_tiempo_youtube()
+	if num == 1:
+		evento_tarjetas._evento(1)
+#		return player._actualizar_facebook(2000)
+	elif num == 2:
+		evento_tarjetas._evento(2)
+#		return player._actualizar_instagram(2000)
+	elif num == 3:
+		evento_tarjetas._evento(3)
+#		return player._actualizar_twitter(2000)
+	elif num == 4:
+		evento_tarjetas._evento(4)
+#		return player._actualizar_whatsapp(2000)
+	elif num == 5:
+		evento_tarjetas._evento(5)
+#		return player._actualizar_youtube(2000)
 		
 	

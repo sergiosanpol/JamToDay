@@ -5,7 +5,7 @@
 
 [node name="ventana" type="Sprite" index="0"]
 
-position = Vector2( -0.0838852, -0.185013 )
+position = Vector2( -0.0838852, 0.814987 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

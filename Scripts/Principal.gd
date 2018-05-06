@@ -13,24 +13,57 @@ var tiempo = 0.0
 var contador = 0
 var tiempo_iteracion = 1.0
 
+var vida = 100;
+var familia = 100;
+var educacion = 100;
 
+var whatsapp = 150;
+var facebook = 500;
+var youtube = 1000;
+var twitter = 1000;
+var instagram = 3000;
+
+var life = preload("res://Escenas/Estado.tscn").instance()
+var counts = preload("res://Escenas/Position2D.tscn").instance()
 
 func _ready():
-	
+	add_child(life)
+	add_child(counts)
 	pass
 
 func _process(delta):
 	tiempo+=delta
-	if(tiempo>=tiempo_iteracion):	
-		lista_ventanas.append(ventanas.instance())
-		var random_x = int(rand_range(0 + 105, SIZE.x - 105))
-		var random_y = int(rand_range(0 + 25, SIZE.y - 25))
+	if(tiempo>=tiempo_iteracion):		
+		
+		var vent = ventanas.instance()
+		lista_ventanas.append(vent)
+		var random_x = int(rand_range(0 + 205, SIZE.x - 105))
+		var random_y = int(rand_range(0 + 125, SIZE.y - 25))
 		lista_ventanas[len(lista_ventanas) - 1].position.x = random_x
 		lista_ventanas[len(lista_ventanas) - 1].position.y = random_y
 		lista_ventanas[len(lista_ventanas)-1]._set_evento(evento_tarjeta)
 		contador = evento_tarjeta.contador
+		
+		
+		whatsapp = evento_tarjeta.whatsapp
+		counts.get_node("Label_What").text = str(whatsapp)
+		
+		facebook = evento_tarjeta.facebook
+		counts.get_node("Label_Face").text = str(facebook)
+		
+		instagram = evento_tarjeta.instagram
+		counts.get_node("Label_Insta").text = str(instagram)
+		
+		twitter = evento_tarjeta.twitter
+		counts.get_node("Label_Twit").text = str(twitter)
+		
+		youtube = evento_tarjeta.youtube
+		counts.get_node("Label_Yout").text = str(youtube)
+		
+		
 		if(contador%10==0):
 			tiempo_iteracion-=0.1
+			life.update()
 		print("Contador :",contador)
 		print("Tiempo :",tiempo_iteracion)
 		add_child(lista_ventanas[len(lista_ventanas) - 1])
