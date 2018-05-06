@@ -5,8 +5,9 @@ extends Sprite
 # var b = "textvar"
 
 onready var node = get_node("TextureRect")
-var player = load("res://Scripts/player.gd").new()
 onready var tiempo = get_node("Timer")
+onready var texto = get_node("RichTextLabel")
+var player 
 var evento_tarjetas
 var num
 
@@ -15,6 +16,7 @@ func _ready():
 	randomize()
 	num = int(rand_range(1,6))
 	var imagen
+	texto.set_text("Hola")
 	 	
 	if num == 1:
 		imagen = load("res://Imagenes/face.png")
@@ -41,23 +43,20 @@ func _set_evento(evento):
 
 		
 func _on_Button_pressed():
-	var fin = (((tiempo.time_left - 1000) * -1) * 1000)
+	#Se le recta el tiempo transcurrido de contador (ya que contador empieza en 1000) y se pasa a milisegundos
+	var fin = ((1000 - tiempo.time_left) * 1000)
 	get_node(".").remove_and_skip()
+	evento_tarjetas._evento()
 	
 	if num == 1:
-		evento_tarjetas._evento(1)
-#		return player._actualizar_facebook(2000)
+		return player._actualizar_facebook(2000)
 	elif num == 2:
-		evento_tarjetas._evento(2)
-#		return player._actualizar_instagram(2000)
+		return player._actualizar_instagram(2000)
 	elif num == 3:
-		evento_tarjetas._evento(3)
-#		return player._actualizar_twitter(2000)
+		return player._actualizar_twitter(2000)
 	elif num == 4:
-		evento_tarjetas._evento(4)
-#		return player._actualizar_whatsapp(2000)
+		return player._actualizar_whatsapp(2000)
 	elif num == 5:
-		evento_tarjetas._evento(5)
-#		return player._actualizar_youtube(2000)
+		return player._actualizar_youtube(2000)
 		
 	
