@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tranqui.ogg-280df883a89c51679b395564b71ac428.oggstr"
+
+[deps]
+
+source_file="res://musica/tranqui.ogg"
+source_md5="e091d9ea4fdedd3e1f970d6befa0b0d4"
+
+dest_files=[ "res://.import/tranqui.ogg-280df883a89c51679b395564b71ac428.oggstr" ]
+dest_md5="98034512ed3d56fd3d21fa044d224fca"
+
+[params]
+
+loop=true
+loop_offset=0
