@@ -21,7 +21,7 @@ func _ready():
 	OS.set_window_size(Vector2(1100.0, 600.0))
 	SIZE = OS.window_size
 	OS.set_window_resizable(false)
-	
+	counts.position = Vector2(30, 70)
 	add_child(life)
 	add_child(counts)
 	pass
@@ -49,6 +49,7 @@ func _process(delta):
 		
 		counts.get_node("Label_Yout").text = str(player.youtube)
 		
+		life.get_node("TextureProgress").value = player.vida
 		
 		if(contador%10==0):
 			if contador >= 90:
