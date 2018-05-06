@@ -1,14 +1,11 @@
 extends Node
 
+var player = load("res://Scripts/player.gd")
+
 var count = 0
-var n_msj = 1
+var n_msj = 0
 var msjs  = [
 "Añapse. Año 2018. Las redes sociales Rettiwt, Koobecaf, Margatsni, Ebutuoy y Ppastahw acaparan la mayoría del tiempo a la ciudadanía. ¿Conseguirás ser el usuario mas influyente de todos?",
-"No te quedan seguidores. Esto es el fin... Espera un momento... Una vida llena de emociones y aventuras te sigue esperando ahí fuera, lejos de la pantalla. ¡Disfruta!",
-"Has conseguido un gran número de seguidores, pero, ¿A qué coste? Tus amigos y familiares te han abandonado. Espero que la soledad no te sea muy dura...",
-"Te han despido. No puedes seguir pagando internet, luz, alquiler... Toca un nuevo comienzo, ¡Suerte!",
-"Has muerto. Publicar lo que te gustan los perros mientras te acercas rápidamente al cruce de la carretera principal quizás no fue una buena decisión",
-"Has muerto. Intentar conseguir esa foto espectacular desde lo mas alto del acantilado quizás no fue la mejor de tus decisiones",
 "Genial. Has conseguido encontrar el equilibrio sin renunciar a nada"
 ]
 var imgs = [
@@ -26,6 +23,7 @@ func _ready():
 	pass
 
 func _process(delta):
+	print("num ", n_msj)
 	count+=0.25
 	if (count<=msjs[n_msj].length()):
 		get_node("RichTextLabel").set_text(str(get_text()))

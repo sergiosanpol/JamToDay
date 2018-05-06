@@ -50,7 +50,10 @@ func _process(delta):
 		
 		counts.get_node("Label_Yout").text = str(player.youtube)
 		
-		life.get_node("ProgressFamily").value = player.vida
+		if player.vida >= 0: 
+			get_tree().change_scene("res://Escenas/msjMuerte1.scn")
+			
+		life.get_node("ProgressLife").value = player.vida
 		
 		if(contador%10==0 && dentro == false):
 			if contador >= 90:
