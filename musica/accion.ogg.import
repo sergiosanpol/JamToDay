@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/accion.ogg-c1d4ae5f946a69e3b6e16e7a79959a30.oggstr"
+
+[deps]
+
+source_file="res://musica/accion.ogg"
+source_md5="0ab1032c3108d19cd3186da5a6f30b90"
+
+dest_files=[ "res://.import/accion.ogg-c1d4ae5f946a69e3b6e16e7a79959a30.oggstr" ]
+dest_md5="ca76e2fc4d8979a836ca7b5f5c52e6dd"
+
+[params]
+
+loop=true
+loop_offset=0

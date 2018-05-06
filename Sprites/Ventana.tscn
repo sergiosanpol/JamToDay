@@ -5,7 +5,7 @@
 
 [node name="ventana" type="Sprite"]
 
-position = Vector2( 2.5322, -0.185013 )
+position = Vector2( -0.0838852, -0.185013 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
@@ -34,10 +34,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -96.0
-margin_top = -37.0
-margin_right = 97.0
-margin_bottom = 37.0
+margin_left = -98.0
+margin_top = -36.0
+margin_right = 95.0
+margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -52,6 +52,13 @@ group = null
 flat = false
 align = 1
 _sections_unfolded = [ "Visibility" ]
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1000.0
+one_shot = true
+autostart = false
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
 

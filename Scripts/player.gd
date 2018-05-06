@@ -27,6 +27,7 @@ func _ready():
 
 
 func _actualizar_whatsapp(tiempo_ms):
+	print("Tiempo what " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		whatsapp+=4;
 		vida -=3;
@@ -45,6 +46,7 @@ func _actualizar_whatsapp(tiempo_ms):
 	
 
 func _actualizar_facebook(tiempo_ms):
+	print("Tiempo face " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		facebook+=10;
 		vida-=3;
@@ -62,6 +64,7 @@ func _actualizar_facebook(tiempo_ms):
 		vida+=2;
 	
 func _actualizar_instagram(tiempo_ms):
+	print("Tiempo insta " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		instagram+=40;
 		vida-=5;
@@ -79,6 +82,7 @@ func _actualizar_instagram(tiempo_ms):
 		vida+=2;
 	
 func _actualizar_twitter(tiempo_ms):
+	print("Tiempo twitter " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		twitter+=40;
 		vida-=5;
@@ -96,6 +100,7 @@ func _actualizar_twitter(tiempo_ms):
 		vida+=2;
 	
 func _actualizar_youtube(tiempo_ms):
+	print("Tiempo you " , tiempo_ms)
 	if(tiempo_ms>=2000):
 		youtube+=100;
 		vida-=10;
@@ -111,21 +116,6 @@ func _actualizar_youtube(tiempo_ms):
 	else:
 		youtube-=50;
 		vida+=2;
-	
-func _calcular_tiempo_whatsapp():
-	return (2000.0 / (whatsapp / 150.0)) /1000.0
-	
-func _calcular_tiempo_facebook():
-	return (2000.0 / (facebook / 500.0)) / 1000.0
-	
-func _calcular_tiempo_youtube():
-	return (2000.0 / (youtube / 1000.0)) / 1000.0
-
-func _calcular_tiempo_instagram():
-	return (2000.0 / (instagram / 3000.0)) / 1000.0
-	
-func _calcular_tiempo_twitter():
-	return (2000.0 / (twitter / 1000.0)) / 1000.0
 	
 	
 
