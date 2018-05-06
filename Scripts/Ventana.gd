@@ -59,14 +59,14 @@ func _on_Button_pressed():
 	evento_tarjetas._evento()
 	
 	if num == 1:
-		return player._actualizar_facebook(2000)
+		return player._actualizar_facebook(fin)
 	elif num == 2:
-		return player._actualizar_instagram(2000)
+		return player._actualizar_instagram(fin)
 	elif num == 3:
-		return player._actualizar_twitter(2000)
+		return player._actualizar_twitter(fin)
 	elif num == 4:
-		return player._actualizar_whatsapp(2000)
+		return player._actualizar_whatsapp(fin)
 	elif num == 5:
-		return player._actualizar_youtube(2000)
+		return player._actualizar_youtube(fin)
 		
 	
