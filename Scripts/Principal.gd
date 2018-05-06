@@ -28,6 +28,7 @@ func _ready():
 	pass
 	
 func _process(delta):
+	comprobarVidas()
 	tiempo+=delta
 	if(tiempo>=tiempo_iteracion):
 		var vent = ventanas.instance()
@@ -75,3 +76,22 @@ func _process(delta):
 		tiempo = 0.0
 		player.all_print()
 		#print(len(lista_ventanas))
+
+
+func comprobarVidas():
+	if(player.vida > 100):
+		player.vida = 100
+	if player.educacion > 100:
+		player.educacion = 100
+	if player.familia > 100:
+		player.familia = 100
+	if player.twitter < 0:
+		player.twitter = 0
+	if player.facebook < 0:
+		player.facebook = 0
+	if player.instagram < 0:
+		player.instagram = 0
+	if player.youtube < 0:
+		player.youtube = 0
+	if player.whatsapp < 0:
+		player.whatsapp = 0
