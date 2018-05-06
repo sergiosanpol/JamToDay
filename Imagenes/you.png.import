@@ -7,10 +7,10 @@ path="res://.import/you.png-1e28662cfddae5f54ff4ec2421b2f79e.stex"
 [deps]
 
 source_file="res://Imagenes/you.png"
-source_md5="72c08a89bed6024f97a0f0f3e15ec6f1"
+source_md5="dfd6801421a3f19e94b8ebe86eede20f"
 
 dest_files=[ "res://.import/you.png-1e28662cfddae5f54ff4ec2421b2f79e.stex" ]
-dest_md5="8162665bb60650c5ab3479959fd0ca6a"
+dest_md5="2c7e2536342d575e9ad60e24537dad33"
 
 [params]
 
