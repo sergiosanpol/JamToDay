@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Principal.gd" type="Script" id=1]
 [ext_resource path="res://Imagenes/photo_2018-05-05_17-24-18.jpg" type="Texture" id=2]
 
-[node name="Spatial" type="Spatial" index="0"]
+[node name="Spatial" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
